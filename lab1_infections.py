@@ -13,14 +13,14 @@ plt.ion() #this makes interactive plots activated
 
 #🧟🧟🧟PART 2🧟🧟🧟
 #defining intitial variables and conditions
-nx, ny = 70, 70 #number of people in X and Y direction
+nx, ny = 100, 100 #number of people in X and Y direction
 # i have set my grid to have "ghost borders" that already are zombified. Once a cell is zombified
 prob_infected = .35 #chance of person to become infected
-prob_transmission = 0.40 #chance of person being healthy
+prob_healthy = 0.65 #chance of person being healthy
 Healthy = 1 #identification for cells forested
 Infected = 2 #identification for cells on fire
 Immune = 3
-nstep = 5 #range of timesteps "k" minutes
+nstep = 1 #range of timesteps "k" minutes
 
 
 #🧟🧟🧟PART 3🧟🧟🧟

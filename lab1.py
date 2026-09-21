@@ -13,21 +13,21 @@ plt.ion() #this makes interactive plots activated
 
 #🌳🌳🌳PART 2🌳🌳🌳
 #defining intitial variables and conditions
-nx, ny = 70, 70 #number of cells in X and Y direction
+nx, ny = 100, 100 #number of cells in X and Y direction
 # i have set my grid to have "ghost borders" that already are burned/bare
-prob_spread = .3 #Chance to spread to adjacent cells
-prob_bare = .02 #Chance of cell to start at bare patch
-prob_ignite = .3 #Chance of cell to start on fire
-Bare = 1 #identificstion for cells that are bare
+prob_spread = .45 #Chance to spread to adjacent cells
+prob_bare = .20 #Chance of cell to start at bare patch
+prob_ignite = .35 #Chance of cell to start on fire
+Bare = 1 #identification for cells that are bare
 Forested = 2 #identification for cells forested
 OnFire = 3 #identification for cells on fire
-nstep = 5 #range of timesteps "k"
+nstep = 8 #range of timesteps "k"
 
 
 #🌳🌳🌳PART 3🌳🌳🌳
 #create an initial grid, set all values to "2" aka forested
 # type in array to integers only
-#note that (nx, ny) is the rsange of all i, j with indexing starting at 0
+#note that (nx, ny) is the range of all i, j with indexing starting at 0
 forest = np.zeros((nstep, nx, ny),
 dtype=int) + 2 #here, I have defined a new name "forest" as an array of my 5 by 5 array and conditionally set all cells to 2
 #colons call all values in that index
