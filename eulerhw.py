@@ -10,7 +10,7 @@ Tf = 80 #desired final temperature of our coffee
 Ts = 18 #temperature of the environment
 k = 0.2 #constant
 #list of different time step widths to test
-dt_values = [0.5, 0.1, 0.05, 0.01, 0.001] #when we change our size of time step, the estimation will become more accurate of the curve we are trying to predict
+dt_values = [1, 0.75, 0.5, 0.1, 0.01] #when we change our size of time step, the estimation will become more accurate of the curve we are trying to predict
 tol = 1 #our tolerance degree threshold that we will permit our coffee to be "drinkable"
 #i = our time steps
 
