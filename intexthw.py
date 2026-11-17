@@ -21,9 +21,9 @@ well_info = (
     [20e3, 9e3, 970]
 )
 
-wells_left = [np.array([0,3,6,8])]*1e3, np.array([967, 985,1000,990])
-wells_right=[np.array([1,4,9])]*1e3, np.array([965, 995, 970])
+wells_left = [np.array([0,3,6,8])*1e3, np.array([967, 985,1000,990])]
+wells_right=[np.array([1,4,9])*1e3, np.array([965, 995, 970])]
 
-potential_left = interpolate.interpld(wells_left[0], wells_left[1], kind='linear',fill_value="extrapolate") (y)
-potential_right = interpolate.interpld(wells_right[0], wells_right[1], kind='linear', fill_value="extrapolate") (y)
+potential_left = interpolate.interp1d(wells_left[0], wells_left[1], kind='linear',fill_value="extrapolate") (y)
+potential_right = interpolate.interp1d(wells_right[0], wells_right[1], kind='linear', fill_value="extrapolate") (y)
 
