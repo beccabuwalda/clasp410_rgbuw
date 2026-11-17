@@ -24,6 +24,13 @@ well_info = (
 wells_left = [np.array([0,3,6,8])*1e3, np.array([967, 985,1000,990])]
 wells_right=[np.array([1,4,9])*1e3, np.array([965, 995, 970])]
 
+
 potential_left = interpolate.interp1d(wells_left[0], wells_left[1], kind='linear',fill_value="extrapolate") (y)
 potential_right = interpolate.interp1d(wells_right[0], wells_right[1], kind='linear', fill_value="extrapolate") (y)
 
+#Added by Makayla!! :)
+
+potential_top = interpolate.interp1d(np.array([x[0], x[-1]]), np.array([potential_left[0], potential_right[0]]), 
+                                     kind='linear',fill_value="extrapolate") (x)
+potential_bottom = interpolate.interp1d(np.array([x[-1], x[-1]]), np.array([potential_left[-1], potential_right[-1]]),
+                                         kind='linear',fill_value="extrapolate") (x)
